@@ -28,10 +28,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+        
       # test network
       - name: Test Network Connection with curl
         run: curl --head https://registry.npmjs.org/
-
+        
+      # test proxy
+      - name: Test Proxy Connection
+        run: curl https://registry.npmjs.org/
+        
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
